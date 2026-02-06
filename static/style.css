@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #1a1a2e;
+    color: #eee;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.controls input {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #2a2a4a;
+    color: #fff;
+}
+
+.controls input::placeholder {
+    color: #888;
+}
+
+.controls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#generate-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+#generate-btn:hover {
+    background: #45a049;
+}
+
+#share-btn {
+    background: #2196F3;
+    color: white;
+}
+
+#share-btn:hover {
+    background: #1976D2;
+}
+
+.seed-display {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+#current-seed {
+    color: #ffd700;
+    font-family: monospace;
+}
+
+.bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    background: #333;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+.bingo-cell {
+    aspect-ratio: 1;
+    background: #2a2a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    font-size: 11px;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.bingo-cell:hover {
+    background: #3a3a5a;
+}
+
+.bingo-cell.checked {
+    background: #4CAF50;
+    color: white;
+}
+
+.bingo-cell.checked:hover {
+    background: #45a049;
+}
+
+@media (max-width: 500px) {
+    .bingo-cell {
+        font-size: 9px;
+        padding: 4px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls input,
+    .controls button {
+        width: 100%;
+    }
+}
