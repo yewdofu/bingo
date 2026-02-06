@@ -1,4 +1,4 @@
-module bingo
+module smw-bingo
 
 go 1.25.4
 
