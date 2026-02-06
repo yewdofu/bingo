@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMW Bingo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SMW Bingo</h1>
+
+        <div class="controls">
+            <input type="text" id="seed-input" placeholder="シード値（空欄でランダム）">
+            <button id="generate-btn">カード生成</button>
+            <button id="share-btn">URLをコピー</button>
+        </div>
+
+        <div class="seed-display">
+            シード: <span id="current-seed">-</span>
+        </div>
+
+        <div id="bingo-card" class="bingo-card">
+            <!-- 5x5 grid will be generated here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
