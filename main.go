@@ -1,12 +1,13 @@
 package main
 
 import (
-	"bingo/bingo"
 	"encoding/json"
 	"fmt"
 	"html"
 	"log"
 	"net/http"
+
+	"bingo/bingo"
 )
 
 func main() {
@@ -33,7 +34,6 @@ func handleCreateBingo(w http.ResponseWriter, r *http.Request) {
 
 	seed := r.FormValue("seed")
 	bc, err := bingo.CreateBingoCard(seed)
-
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
